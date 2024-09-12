@@ -1,0 +1,6 @@
+@VirtualStoreApi_HostAddress = http://localhost:5224
+
+GET {{VirtualStoreApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
