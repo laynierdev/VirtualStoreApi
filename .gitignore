@@ -1,0 +1,94 @@
+﻿# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Visual Studio #
+#################
+.vscode/
+.vs/
+*.csproj.user
+*.csproj.userosscache
+*.csproj.userstream
+*.suo
+*.user
+*.userosscache
+*.userstream
+*.sln.docstates
+
+# ASP.NET Scaffolding #
+#######################
+ScaffoldingReadMe.txt
+
+# ASP.NET Core #
+################
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# NPM #
+#######
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment variables #
+#########################
+.env
+
+# Rider #
+#########
+.idea/
+*.sln.iml
+
+# JetBrains Rider #
+###################
+.idea/
+*.sln.iml
+
+# Mac #
+#######
+*.DS_Store
+
+# Windows #
+###########
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Others #
+##########
+*.bak
+*.swp
