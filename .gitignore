@@ -88,6 +88,11 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
+# Build directories #
+#####################
+bin/
+obj/
+
 # Others #
 ##########
 *.bak

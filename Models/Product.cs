@@ -2,17 +2,17 @@
 
 public class Product
 {
-    public long Id { get; set; }
-    public string? Name { get; set; }
-    public float Price { get; set; }
-    public string? Description { get; set; }
-    public bool InStock { get; set; }
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public decimal Price { get; set; }
+    public int Stock { get; set; }
+    public int? CategoryId { get; set; }
+    public Category Category { get; set; }
+    public ICollection<OrderDetail> OrderDetails { get; set; }
 
-    public Product(long id, string? name, float price, string? description, bool inStock)
+    public Product()
     {
-        this.Id = id;
-        this.Name = name;
-        this.Price = price;
-        this.Description = description;
+        OrderDetails = new List<OrderDetail>();
     }
 }
