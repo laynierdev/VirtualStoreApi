@@ -16,24 +16,38 @@ namespace VirtualStoreApi.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //due to mysql do not follow convention CamelCase or Pascalcase
             modelBuilder.Entity<Product>()
-                .HasOne(p => p.Category)
-                .WithMany(c => c.Products)
+                .Property(p => p.CategoryId)
+                .HasColumnName("category_id");
+            
+            modelBuilder.Entity<Product>()
+                .HasOne<Category>()
+                .WithMany()
                 .HasForeignKey(p => p.CategoryId);
 
             modelBuilder.Entity<Order>()
-                .HasOne(o => o.User)
-                .WithMany(u => u.Orders)
+                .Property(or => or.UserId)
+                .HasColumnName("user_id");
+            modelBuilder.Entity<Order>()
+                .HasOne<User>()
+                .WithMany()
                 .HasForeignKey(o => o.UserId);
-
+            
+            modelBuilder.Entity<OrderDetail>().Property(od => od.UnitPrice)
+                .HasColumnName("unit_price");
+            modelBuilder.Entity<OrderDetail>().Property(od => od.OrderId)
+                .HasColumnName("order_id");
             modelBuilder.Entity<OrderDetail>()
-                .HasOne(od => od.Order)
-                .WithMany(o => o.OrderDetails)
+                .HasOne<Order>()
+                .WithMany()
                 .HasForeignKey(od => od.OrderId);
-
+            
+            modelBuilder.Entity<OrderDetail>().Property(od => od.ProductId)
+                .HasColumnName("product_id");
             modelBuilder.Entity<OrderDetail>()
-                .HasOne(od => od.Product)
-                .WithMany(p => p.OrderDetails)
+                .HasOne<Product>()
+                .WithMany()
                 .HasForeignKey(od => od.ProductId);
         }
     }

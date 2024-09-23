@@ -6,18 +6,13 @@ public class Category
 
     public string? Name { get; set; }
     public string? Description { get; set; }
-    public ICollection<Product> Products { get; set; }
-    
 
     
 
-    public Category(int id, string? name, string? description, ICollection<Product> products)
+    
+
+    public Category(int id, string? name, string? description)
     {
-        Products = products;
         (Id, Name, Description) = (id, name, description);
-    }
-    public Category()
-    {
-        Products = new List<Product>();
     }
 }
