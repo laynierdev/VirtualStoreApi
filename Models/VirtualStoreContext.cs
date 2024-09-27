@@ -18,6 +18,10 @@ namespace VirtualStoreApi.Models
         {
             //due to mysql do not follow convention CamelCase or Pascalcase
             modelBuilder.Entity<Product>()
+                .Property(p => p.ImageUrl)
+                .HasColumnName("imageurl");
+                        
+            modelBuilder.Entity<Product>()
                 .Property(p => p.CategoryId)
                 .HasColumnName("category_id");
             
